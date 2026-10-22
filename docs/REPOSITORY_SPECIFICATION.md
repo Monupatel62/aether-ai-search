@@ -1,6 +1,6 @@
 # Repository specification: aether-ai-search
 
-**Status:** Documentation baseline copied from the Aether AI master specification. Implementation status must be verified separately.
+**Status:** Repository exists; documentation-only on the inspected `main` branch. No application implementation is present in the audited tree.
 
 ## Mission
 
@@ -8,7 +8,7 @@ Lexical/vector search abstraction, indexing lifecycle, filters, ranking, and acc
 
 ## Dependencies and connections
 
-Selected lexical/vector backend (TBD), neutral index/document metadata contract, and security policy contract. RAG and knowledge publish/consume versioned contracts; Search must not import either domain implementation.
+Selected search/vector backend adapter, aether-ai-database for neutral metadata contracts, and aether-ai-security for query policy.
 
 ## Owned capabilities
 
