@@ -39,7 +39,7 @@ Index schema/versioning, tenant/ACL filters, ranking, deletion propagation, resu
 
 ## Implementation gates
 
-1. Confirm ownership and dependencies in [master catalog](../REPOSITORY_CATALOG.md).
+1. Confirm ownership and dependencies in [master catalog](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/REPOSITORY_CATALOG.md).
 2. Decide open infrastructure choices through ADRs rather than assumptions.
 3. Build a minimal, testable component and add contract tests.
 4. Run dependency/license, vulnerability, secret, and configuration checks.
@@ -47,7 +47,7 @@ Index schema/versioning, tenant/ACL filters, ranking, deletion propagation, resu
 
 ## Research references
 
-- [Aether AI master catalog](../REPOSITORY_CATALOG.md)
+- [Aether AI master catalog](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/REPOSITORY_CATALOG.md)
 - [AI DIAL Core](https://github.com/epam/ai-dial-core)
 - [AI DIAL Chat architecture](https://github.com/epam/ai-dial-chat/blob/development/docs/architecture.md)
 - [WoHo AI DevKit](https://github.com/Monupatel62/woho-ai-devkit)
@@ -66,13 +66,13 @@ Before release, add unit tests, contract tests for direct dependencies, negative
 
 ## Search engine decision gate
 
-See [Data Infrastructure Evaluation](../DATA_INFRASTRUCTURE_EVALUATION.md). Start the benchmark with PostgreSQL full-text search plus pgvector hybrid retrieval. A dedicated search/vector service is conditional on evidence from representative latency, recall, indexing throughput, filters and operational-cost tests. Search indexes are rebuildable projections; source documents, ACL references, deletion state and tenant permissions remain authoritative in their owning domains. Revocation/deletion propagation targets must be defined before implementation. Enforce tenant/ACL filters before results leave the search boundary and test revoked access, stale indexes, deletions, poisoned content and unauthorized snippet leakage.
+See [Data Infrastructure Evaluation](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/DATA_INFRASTRUCTURE_EVALUATION.md). Start the benchmark with PostgreSQL full-text search plus pgvector hybrid retrieval. A dedicated search/vector service is conditional on evidence from representative latency, recall, indexing throughput, filters and operational-cost tests. Search indexes are rebuildable projections; source documents, ACL references, deletion state and tenant permissions remain authoritative in their owning domains. Revocation/deletion propagation targets must be defined before implementation. Enforce tenant/ACL filters before results leave the search boundary and test revoked access, stale indexes, deletions, poisoned content and unauthorized snippet leakage.
 
 ## Related documentation
 
-- [Master repository catalog](../REPOSITORY_CATALOG.md)
-- [Master architecture](../MASTER_ARCHITECTURE.md)
-- [Architecture audit](../ARCHITECTURE_AUDIT.md)
-- [Security threat model](../SECURITY_THREAT_MODEL.md)
-- [Open decisions and research](../OPEN_DECISIONS_RESEARCH.md)
-- [Continuity handoff](../WORK_HANDOFF.md)
+- [Master repository catalog](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/REPOSITORY_CATALOG.md)
+- [Master architecture](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/MASTER_ARCHITECTURE.md)
+- [Architecture audit](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/ARCHITECTURE_AUDIT.md)
+- [Security threat model](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/SECURITY_THREAT_MODEL.md)
+- [Open decisions and research](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/OPEN_DECISIONS_RESEARCH.md)
+- [Continuity handoff](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/WORK_HANDOFF.md)
