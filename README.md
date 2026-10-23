@@ -2,7 +2,7 @@
 
 Lexical/vector search abstraction, indexing lifecycle, filters, ranking, and access-aware queries.
 
-**Status:** Documentation foundation only; no implementation or deployment is claimed.
+**Status:** Initial deterministic lexical-ranking utility is in review; no search backend or index lifecycle is implemented.
 
 ## Documentation
 - [Project specification](docs/PROJECT_SPEC.md)
@@ -14,5 +14,9 @@ Lexical/vector search abstraction, indexing lifecycle, filters, ranking, and acc
 - [Research and licenses](docs/RESEARCH_AND_LICENSES.md)
 - [Engineering standard](docs/ENGINEERING_STANDARD.md)
 - [Work log](docs/WORKLOG.md)
+
+## Initial implementation
+
+The draft package provides bounded deterministic lexical ranking for caller-supplied documents and returns IDs, source versions, scores, and matched terms without snippets. The caller must pre-filter by tenant/ACL and reauthorize results against the authoritative resource policy. This utility cannot enforce access, persist indexes, provide vector search, or propagate deletions/revocations.
 
 [Master catalog](https://github.com/Monupatel62/aether-ai-platform/blob/main/docs/REPOSITORY_CATALOG.md)
